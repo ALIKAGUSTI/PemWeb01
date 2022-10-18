@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pemesanan Barang</title>
+  </head>
+  <body style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; background: rgb(153, 228, 212)">
+    <table align="center" style="background-color: rgb(255, 255, 255); margin-top: 15px; margin-bottom: 15px; border: 1px solid">
+      <tr>
+        <td style="border-right: 1px solid; padding: 0 60px">Beranda</td>
+        <td style="border-right: 1px solid; padding: 0 60px">Buka tautan</td>
+        <td style="border-right: 1px solid; padding: 0 60px">Transaksi Sebelumnya</td>
+        <td style="border-right: 1px solid; padding: 0 60px">Keamanan</td>
+        <td style="padding: 0 60px">Keluar</td>
+      </tr>
+    </table>
+
+    <form action="bayar.html">
+      <table align="center" cellpadding="10" style="width: 980px">
+        <tbody>
+          <tr>
+            <td rowspan="9" width="270">
+              <img src="jaket2.jpg" width="200" alt="ini photo" style="border: 2px solid #000" /> 
+              <br />
+              <button style="background-color: rgb(93, 105, 105); color: rgb(10, 10, 10); padding: 3px 15px; border: 2px solid #000; border-radius: 1px; cursor: pointer; box-shadow: rgba(0, 0, 0, 0.4) 2.5px 2.5px 2.6px; margin-bottom: 225px">
+                Upload <picture></picture>
+              </button>
+            </td>
+            <td width="160px">Tittle </td>
+            <td>
+                :<input type="text" name="Barang" />
+            </td>
+          </tr>
+          <tr>
+            <td>Description </td>
+            <td>
+                :<textarea name="deskripsi" cols="40" rows="3"></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td>Account Owner </td>
+            <td>
+                :<input type="number" name="nomor akun" />
+            </td>
+          </tr>
+          <tr>
+            <td>Bank :</td>
+            <td>
+              <select>
+                <option>BCA</option>
+                <option>BRI</option>
+                <option>BNI</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Account Owner </td>
+            <td>
+                :<input type="text" name="pemegang akung" placeholder="Nama Disini" />
+            </td>
+          </tr>
+          <tr>
+            <td>Transaction :</td>
+            <td>
+              <input type="number" name="transaksi" min="0" max="4" placeholder="0" />
+               <br />* If the transaction is for 2 more people, select 2 from the dropdown list<br />
+              <input type="checkbox" name="check" /> Send to Number <br />
+              <input type="checkbox" name="check" /> Send To Email
+            </td>
+          </tr>
+          <tr>
+            <td>Send To Number HandPhone </td>
+            <td>
+                :<input type="number" name="nomor telepon" />
+            </td>
+          </tr>
+          <tr>
+            <td>Sennd To Email</td>
+            <td>
+              :<input type="email" name="email" />
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <input
+                type="submit"
+                value="CheckOut"
+                style="background-color: #4a5253; color: rgb(8, 8, 8); font-weight: bold; padding: 3px 15px; border: 2px solid #000; border-radius: 1px; cursor: pointer; box-shadow: rgba(0, 0, 0, 0.4) 2.5px 2.5px 2.6px"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </body>
+</html>
