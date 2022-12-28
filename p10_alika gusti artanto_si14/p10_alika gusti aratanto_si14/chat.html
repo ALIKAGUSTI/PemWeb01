@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chat</title>
+    <style>        
+        .open-button {
+        background-color: #555;
+        color: white;
+        padding: 16px 20px;
+        border: none;
+        cursor: pointer;
+        opacity: 0.8;
+        position: fixed;
+        bottom: 23px;
+        right: 28px;
+        width: 280px;
+        }
+
+        .chat-popup {
+          display: none;
+          position: fixed;
+          bottom: 0;
+          right: 15px;
+          border: 3px solid #f1f1f1;
+          border-radius: 10px;
+          z-index: 9;
+        }
+        
+        .form-container {
+          width: 300px;
+          padding: 10px;
+          background-color: white;
+        }
+        
+        .form-container #write {
+            width: 100%;
+          border: none;
+          background: #f1f1f1;
+          margin-top: 5px;
+          margin-bottom: 5px;
+          resize: none;
+          min-height: 50px;
+          border-radius: 10px;
+        }
+
+        .form-container .chat {
+            width: 100%;
+            height: 180px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            background-color: #f1f1f1;
+        }
+        .form-container .btn {
+          background-color: #04AA6D;
+          color: white;
+          padding: 16px 20px;
+          border: none;
+          cursor: pointer;
+          width: 305px;
+          margin-bottom:10px;
+          opacity: 0.8;
+        }
+
+        .form-container .cancel {
+        background-color: red;
+    }
+
+.form-container .btn:hover, .open-button:hover {
+opacity: 1;
+}
+</style>
+</head>
+<body>
+<button class="open-button" onclick="openForm()">Chat</button>
+<div class="chat-popup" id="myForm">
+<form class="form-container">
+ <h1>Chat</h1>
+  <div class="chat" id="isichat"></div>
+    <label for="msg"><b>Message</b></label>
+    <textarea name="msg" id="write" required></textarea>
+
+    <button type="button" class="btn" onclick="chat()">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+</form>
+</div>
+
+<script>
+function chat() {
+let elemen, teks, parent, spasi
+let inp_chat = document.getElementById("write").value
+elemen = document.createElement("span")
+spasi = document.createElement("br")
+teks = document.createTextNode(inp_chat)
+
+elemen.appendChild(teks)
+parent = document.getElementById("isichat")
+parent.appendChild(spasi)
+parent.appendChild(elemen)
+}
+
+function openForm() {
+document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+</body>
+</html>
